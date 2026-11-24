@@ -5,8 +5,8 @@ search:
 <h1 align="center">Echoview COM Tools</h1>
 
 <div style="display: flex; gap: 32px; justify-content: center; align-items: center; flex-wrap: wrap;">
-  <img src="assets/AA-SI-logo_tbg_7x12in.png" alt="NOAA Active Acoustics Strategic Initiative logo" style="height: 100px; width: auto;">
-  <img src="assets/echoview.png" alt="Echoview logo" style="height: 100px; width: auto;">
+  <img src="assets/AA-SI-logo_tbg_7x12in.png" alt="NOAA Active Acoustics Strategic Initiative logo" style="height: 170px; width: auto;">
+  <img src="assets/echoview.png" alt="Echoview logo" style="height: 170px; width: auto;">
 </div>
 
 The Active Acoustics Strategic Initiative aims to modernize active acoustic data processing in NOAA Fisheries. [Echoview](https://echoview.com/) is a commercially-available software package used throughout NOAA to process active acoustic data. With an active Echoview license including the Automation module, most of Echoview's functionalities can be automated. Scripts in any language can be used to create, edit, and export outputs of Echoview workflows through COM objects and the Echoview command interface. This is particularly advantageous for batch processing of multiple Echoview files and improving the scalability of applying workflows to different EK80 datasets.
