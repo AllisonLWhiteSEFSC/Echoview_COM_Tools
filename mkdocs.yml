@@ -1,13 +1,47 @@
 site_name: Echoview COM Tools
 repo_url: https://github.com/AllisonLWhiteSEFSC/Echoview_COM_Tools
 repo_name: AllisonLWhiteSEFSC/Echoview_COM_Tools
-author: Allison L White
+site_author: Allison L White
 
 theme:
   name: material
+  logo: assets/NOAA-color-logo-no-text-print.png
+  favicon: assets/noaa_favicon.png
   features:
-    - navigation.sections
+    - search.suggest
+    - search.highlight
     - content.code.copy
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/git-alt
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
 
 nav:
   - Home: index.md
+  # - Getting Started:
+  #     - Installation: getting-started/installation.md
