@@ -19,7 +19,7 @@
     * `pywin32` package (see below for installation)
 
 ## Step 1: Install `pywin32`
-`pywin32` is the Python package for Windows Extensions, including Component Object Module (COM) support. It can easily by installed via pip:
+`pywin32` is the Python package for Windows Extensions, including Component Object Model (COM) support. It can easily by installed via pip:
 
 ```python
 pip install pywin32
