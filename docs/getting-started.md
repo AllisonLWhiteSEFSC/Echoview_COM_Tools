@@ -43,22 +43,34 @@ EvFile = EvApp.NewFile()
 ```
 
 ### Step 3.1: Add .raw data to your new .EV file
-Add .raw files to `Fileset 1` in Echoview by pointing Python to the directory where the .raw files that you would like to add are stored or adding all the .raw files in your current directory.
+Add .raw files to `Fileset 1` in Echoview by pointing Python to a user-specified directory where the .raw files that you would like to add are stored or adding all the .raw files in your current directory.
 
-```python
-from glob import glob
+=== "User-Specified Directory"
 
-# Set the directory where you want to add .raw files from
-target_dir = r"InsertPathHere" # replace this with the path to your directory
-raw_files = sorted(glob(os.path.join(target_dir, '*.raw')))
+    ```python
+    from glob import glob
+    
+    # Set the directory where you want to add .raw files from
+    target_dir = r"InsertPathHere" # replace this with the path to your directory
+    raw_files = sorted(glob(os.path.join(target_dir, '*.raw')))
 
-# -OR- add all the .raw files in your current directory
-raw_files = sorted(glob(os.path.join(os.getcwd(), '*.raw')))
+    # Add the .raw files to `Fileset 1` in Echoview to create a new .EV file
+    for file_path in raw_files:
+      EvFile.Filesets.Item(0).Datafiles.Add(file_path)
+    ```
 
-# Add the .raw files to `Fileset 1` in Echoview to create a new .EV file
-for file_path in raw_files:
-    EvFile.Filesets.Item(0).Datafiles.Add(file_path)
-```
+=== "Current Directory"
+
+    ```python
+    from glob import glob
+    
+    # Add all the .raw files in your current directory
+    raw_files = sorted(glob(os.path.join(os.getcwd(), '*.raw')))
+    
+    # Add the .raw files to `Fileset 1` in Echoview to create a new .EV file
+    for file_path in raw_files:
+      EvFile.Filesets.Item(0).Datafiles.Add(file_path)
+    ```
 
 ## Step 4: Open an existing .EV file
 To open an existing .EV file, simply point Python to the path where it is stored.
@@ -68,13 +80,20 @@ EvFile = EvApp.OpenFile(r"InsertPathHere.EV") # replace this with the path to yo
 
 ## Step 5: Save your .EV file
 To save your new .EV file or to change the name of your existing .EV file, use `SaveAs()`. To simply save changes made to your existing .EV file, use `Save()`.
-```python
-# Save your .EV file as "New.EV"
-EvFile.SaveAs(r"New.EV") # replace this with the name you want to assign to your new .EV file, including the path to the directory you want to save it to (if different from the current directory)
 
-# -OR- Save changes to your existing .EV file without changing the name
-EvFile.Save()
-```
+=== "SaveAs()"
+
+    ```python
+    # Save your .EV file as "New.EV"
+    EvFile.SaveAs(r"New.EV") # replace this with the name you want to assign to your new .EV file, including the path to the directory you want to save it to (if different from the current directory)
+    ```
+
+=== "Save()"
+
+    ```python
+    # Save changes to your existing .EV file without changing the name
+    EvFile.Save()
+    ```
 
 ## Step 6: Close your .EV file
 Run this after saving your .EV file to close Echoview, or run it on its own to close Echoview without saving any changes made to your .EV file.
