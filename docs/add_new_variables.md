@@ -23,8 +23,8 @@ Once you've referenced the operand variable, you can create the new variable dir
     svcopy = svraw.AddVariable(16) # 16 is the enum value for the "Copy" operator. Change this value to the enum value for the variable you want to create listed in EOperator.
     ```
 
-    ??? note "NOTE:"
-        Assigning a name to this action creates a Python object that you can then reference when you want to change variable properties or use your new variable as an operand in downstream processing. It **_does not_** change the name of the new variable in Echoview, which defaults to the Echoview naming conventions for new variables ("Copy 1" in this example). It's highly recommended to assign a descriptive name to your new variable in Echoview by [editing the variable properties](#editing-variable-properties).
+???+ note "NOTE:"
+    Assigning a name to this action creates a Python object that you can then reference when you want to change variable properties or use your new variable as an operand in downstream processing. It **_does not_** change the name of the new variable in Echoview, which defaults to the Echoview naming conventions for new variables ("Copy 1" in this example). It's highly recommended to assign a descriptive name to your new variable in Echoview by [editing the variable properties](#editing-variable-properties).
 
 For variables that require **two or more operands**, you must 
 1. create Python objects for both operand variables,
