@@ -26,7 +26,7 @@ pip install pywin32
 ```
 
 ## Step 2: Open an Echoview instance on your machine
-This establishes a COM connection between Python and Echoview. This is the first step in any Echoview COM script, whether you are [creating a new .EV file](#step-3:create-a-new-.ev-file-and-load-.raw-data) or [opening/editing an existing .EV file](#step-4:-open-an-existing-.ev-file).
+This establishes a COM connection between Python and Echoview. This is the first step in any Echoview COM script, whether you are [creating a new .EV file](#step-3-create-a-new-ev-file-and-load-raw-data) or [opening/editing an existing .EV file](#step-4-open-an-existing-ev-file).
 ```python
 import win32com.client
 import os
