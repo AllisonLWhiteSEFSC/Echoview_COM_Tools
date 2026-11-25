@@ -1,0 +1,5 @@
+/* Match code block font size inside admonitions to regular page code blocks */
+.md-typeset .admonition pre,
+.md-typeset details pre {
+  font-size: 0.68rem;
+}
