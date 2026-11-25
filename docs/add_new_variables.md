@@ -11,7 +11,7 @@ To create new variables, you first need to reference the parent variable in your
 svraw = EvFile.Variables.FindByName("Fileset 1: Sv pings T1")
 ```
 
-!!! note "NOTE:"
+???+ note "NOTE:"
     The variable name in `FindByName()` needs to match the exact name assigned to your operand variable in Echoview, including the transducer number (eg. T1) for raw variables. See [Accessing Information About Existing Variables](#Accessing-Information-About-Existing-Variables) for information on how to create a list of existing Echoview variables in Python for ease in automating this process.
  
 Once you've referenced the operand variable, you can create the new variable directly from the Python object you created using the enum value for the new operator listed in Echoview's [EOperator](https://support.echoview.com/WebHelp/How_To/Run_Echoview_Using_Scripts/COM_Objects/EOperator.htm).
@@ -23,7 +23,7 @@ Once you've referenced the operand variable, you can create the new variable dir
     svcopy = svraw.AddVariable(16) # 16 is the enum value for the "Copy" operator. Change this value to the enum value for the variable you want to create listed in EOperator.
     ```
 
-    !!! note "NOTE:"
+    ??? note "NOTE:"
         Assigning a name to this action creates a Python object that you can then reference when you want to change variable properties or use your new variable as an operand in downstream processing. It **_does not_** change the name of the new variable in Echoview, which defaults to the Echoview naming conventions for new variables ("Copy 1" in this example). It's highly recommended to assign a descriptive name to your new variable in Echoview by [editing the variable properties](#Editing-Variable-Properties).
 
 For variables that require **two or more operands**, you must 
