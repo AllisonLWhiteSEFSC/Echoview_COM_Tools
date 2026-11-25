@@ -43,7 +43,7 @@ EvFile = EvApp.NewFile()
 ```
 
 ### Step 3.1: Add .raw data to your new .EV file
-Add .raw files to `Fileset 1` in Echoview by pointing Python to a user-specified directory where the .raw files that you would like to add are stored or adding all the .raw files in your current directory.
+Add .raw files to `Fileset 1` in Echoview by pointing Python to a user-specified directory where the .raw files that you would like to add are stored _or_ by adding all the .raw files in your current directory.
 
 === "User-Specified Directory"
 
