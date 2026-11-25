@@ -11,11 +11,12 @@
 # Accessing Echoview Through `COM` in `Python`
 
 ???+ info "Requirements"
-     To access Echoview via Python, your local machine must have the following:
-     * **Windows** operating system
-     * Echoview software installed with active license (including the Automation Module)
-     * Python 3.10+
-     * `pywin32` package (see below for installation)
+    To access Echoview via Python, your local machine must have the following:
+
+    * **Windows** operating system
+    * Echoview software installed with active license (including the Automation Module)
+    * Python 3.10+
+    * `pywin32` package (see below for installation)
 
 ## Step 1: Install `pywin32`
 `pywin32` is the Python package for Windows Extensions, including Component Object Module (COM) support. It can easily by installed via pip:
