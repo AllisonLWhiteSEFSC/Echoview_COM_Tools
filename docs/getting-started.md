@@ -85,7 +85,7 @@ To save your new .EV file or to change the name of your existing .EV file, use `
 
     ```python
     # Save your .EV file as "New.EV"
-    EvFile.SaveAs(r"New.EV") # replace this with the name you want to assign to your new .EV file, including the path to the directory you want to save it to (if different from the current directory)
+    EvFile.SaveAs(r"New.EV") # replace this with the name you want to assign to your new .EV file, including the path to the directory you want to save it to
     ```
 
 === "Save()"
