@@ -31,7 +31,7 @@ This establishes a COM connection between Python and Echoview. This is the first
 import win32com.client
 import os
 
-# Open Echoview connection
+# Open Echoview COM connection
 EvApp = win32com.client.Dispatch("EchoviewCom.EvApplication")
 ```
 
