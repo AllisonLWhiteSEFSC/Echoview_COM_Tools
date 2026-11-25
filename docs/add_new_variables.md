@@ -26,13 +26,14 @@ Once you've referenced the operand variable, you can create the new variable dir
 ???+ note "NOTE:"
     Assigning a name to this action creates a Python object that you can then reference when you want to change variable properties or use your new variable as an operand in downstream processing. It **_does not_** change the name of the new variable in Echoview, which defaults to the Echoview naming conventions for new variables ("Copy 1" in this example). It's highly recommended to assign a descriptive name to your new variable in Echoview by [editing the variable properties](#editing-variable-properties).
 
-For variables that require **two or more operands**, you must 
-1. create Python objects for both operand variables,
-2. create a Python object for your new variable, and
-3. use `SetOperand` to assign all additional operands.
+For variables that require **two or more operands**, you must:
+
+1. Create Python objects for both operand variables,
+2. Create a Python object for your new variable, and
+3. Use `SetOperand` to assign all additional operands.
 
 !!! example "EXAMPLE: Create a Single Target Detection Variable with Two Operands"
-    Create a **Single target detection - split beam (method 2)** variable from a raw TS variable and set the second operand to a raw angular position variable:
+    Create a "single target detection - split beam (method 2)" variable from a raw TS variable and set the second operand to a raw angular position variable:
 
     ```python
     # 1) Create Python objects to reference the two operands.
@@ -46,9 +47,20 @@ For variables that require **two or more operands**, you must
     sed.SetOperand(2,apraw)
     ```
 
-*When creating variables that _require_ two or more variables (such as "Mask" variables), you may not see the new variable appear in your Echoview Dataflow window until the second operand has been added. The new variable is still created in Echoview, even without a second operand, but it will be Hidden in the Dataflow until you either Show the variable in Echoview by right-clicking in your Dataflow window or until all required operands are added.
+???+ note "NOTE:"
+    When creating variables that _require_ two or more variables (such as "Mask" variables), you may not see the new variable appear in your Echoview Dataflow window until the second operand has been added. The new variable is still created in Echoview, even without a second operand, but it will be Hidden in the Dataflow until you either Show the variable in Echoview by right-clicking in your Dataflow window or until all required operands are added.
 
 ## Editing Variable Properties
+
+Most items in the Variable Properties page for Echoview acoustic and virtual variables are accessible and editable via scripting. There are two methods to edit variable properties through scripting:
+
+1. Access Echoview's *command interface* via `Exec()`:
+     This is the most efficient method. The command interface is capable of accessing almost any variable property, and commands can be piped to edit multiple properties in the same line of code. In Echoview 15+, you can easily view the command interface nomenclature for variable properties in the "Properties Information" window. Simply click on the variable you want to edit in your Dataflow, then expand the variable properties pages in the "Properties Information" window to see the command interface nomenclature for all available variable properties.
+   
+
+   
+3. Use built-in `COM` objects:
+     
 
 
 ## Accessing Information About Existing Variables
