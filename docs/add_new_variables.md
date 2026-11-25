@@ -16,7 +16,7 @@ svraw = EvFile.Variables.FindByName("Fileset 1: Sv pings T1")
  
 Once you've referenced the operand variable, you can create the new variable directly from the Python object you created using the enum value for the new operator listed in Echoview's [EOperator](https://support.echoview.com/WebHelp/How_To/Run_Echoview_Using_Scripts/COM_Objects/EOperator.htm).
 
-!!! example "Create a Copy Variable"
+!!! example "EXAMPLE: Create a Copy Variable"
 
     ```python
     # Create a new "Copy" variable of the operand variable `svraw`
@@ -31,7 +31,7 @@ For variables that require **two or more operands**, you must
 2. create a Python object for your new variable, and
 3. use `SetOperand` to assign all additional operands.
 
-!!! example "Create a Single Target Detection Variable with Two Operands"
+!!! example "EXAMPLE: Create a Single Target Detection Variable with Two Operands"
     Create a **Single target detection - split beam (method 2)** variable from a raw TS variable and set the second operand to a raw angular position variable:
 
     ```python
